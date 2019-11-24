@@ -31,7 +31,7 @@ function doQuery(whatQuery) {
 var db = dis.database();
 
 // Example 1
-// Searching
+// Searching (requires auth)
 // https://www.discogs.com/developers/#page:database,header:database-search
 const queryType = 'album';
 const query = "Dvorak & Suk: Sérénades tchèques";
@@ -51,6 +51,6 @@ db.search(query, {
 
 
 // Example 2
-// Query a specific release
+// Query a specific release (would work without auth)
 const releaseId = 7198263;
 doQuery(db.getRelease(releaseId));
